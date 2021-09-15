@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /*
 *************************CODING TASK*********************************
 1. Create variables to represent scores of exams for Matt and Simon and set values   80 and 45;
@@ -13,7 +13,7 @@
 // SOLUTION:
 // 1.
 const scoreMatt = 80;
-const scoreSimon = 45;
+const scoreSimon = 50;
 
 // 2.
 const lowerLimit = 51;
@@ -31,16 +31,16 @@ const lowerLimit = 51;
 const whichOnePassed = function () {
   if (scoreMatt > scoreSimon) {
     console.log(`Matt passed (score: ${scoreMatt}) and Simon failed`);
-  } else if (scoreSimon > scoreMatt) {
+  } else {
     console.log(`Simon passed (score: ${scoreSimon}) and Matt failed`);
   }
 };
 
-if (scoreMatt > lowerLimit && scoreSimon > lowerLimit) {
-    console.log("Both students have passed the exam");
-  } else if (scoreMatt > lowerLimit || scoreSimon > lowerLimit) {
-    console.log("One of the students has passed the exam");
-    whichOnePassed();
-  } else if (scoreMatt <= lowerLimit && scoreSimon <= lowerLimit) {
-    console.log("Both Students have failed");
-  }
+if (scoreMatt >= lowerLimit && scoreSimon >= lowerLimit) {
+  console.log('Both students have passed the exam');
+} else if (scoreMatt >= lowerLimit || scoreSimon >= lowerLimit) {
+  console.log('One of the students has passed the exam');
+  whichOnePassed();
+} else if (scoreMatt < lowerLimit && scoreSimon < lowerLimit) {
+  console.log('Both Students have failed');
+}
